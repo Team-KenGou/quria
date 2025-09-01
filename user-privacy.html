@@ -45,19 +45,20 @@
         .privacy-controls { background-color: #e8f5e8; padding: 15px; border-radius: 5px; border-left: 4px solid #28a745; margin: 15px 0; }
         .data-transparency { background-color: #fff3cd; padding: 15px; border-radius: 5px; border-left: 4px solid #ffc107; margin: 15px 0; }
         .contact-info { background-color: #d1ecf1; padding: 15px; border-radius: 5px; border-left: 4px solid #17a2b8; margin: 15px 0; }
-        .lang-switch { display:flex; gap:8px; align-items:center; }
-        .lang-switch button { background:#f1f1f1; border:1px solid #ddd; padding:6px 10px; border-radius:4px; cursor:pointer; font-size:14px; }
-        .lang-switch button.active { background:#3498db; color:#fff; border-color:#3498db; }
+    .lang-switch { display:flex; gap:8px; align-items:center; }
+    .lang-switch select { background:#fff; border:1px solid #ddd; padding:6px 8px; border-radius:4px; cursor:pointer; font-size:14px; }
     </style>
 </head>
 <body>
     <header>
         <h1>User Privacy</h1>
         <div class="lang-switch" aria-label="Language selector">
-            <label for="lang">Language:</label>
-            <button data-lang="en" id="btn-en">EN</button>
-            <button data-lang="ja" id="btn-ja">日本語</button>
-            <button data-lang="zh" id="btn-zh">中文</button>
+            <label for="lang-select">Language:</label>
+            <select id="lang-select" aria-label="Language selector">
+                <option value="en">EN</option>
+                <option value="ja">日本語</option>
+                <option value="zh">中文</option>
+            </select>
         </div>
     </header>
 
@@ -667,8 +668,10 @@
             const defaultLang = 'en';
 
             function getPreferredLang(){
-                const stored = localStorage.getItem('quria_lang');
-                if(stored && supported.includes(stored)) return stored;
+                try{
+                    const stored = localStorage.getItem('quria_lang');
+                    if(stored && supported.includes(stored)) return stored;
+                }catch(e){ /* ignore storage errors */ }
                 const nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
                 if(!nav) return defaultLang;
                 const primary = nav.split('-')[0];
@@ -676,22 +679,35 @@
             }
 
             function showLang(lang){
-                document.querySelectorAll('.lang').forEach(el=>{
-                    el.style.display = (el.dataset.lang === lang) ? '' : 'none';
-                });
-                try{ document.documentElement.lang = lang; }catch(e){}
-                localStorage.setItem('quria_lang', lang);
-                document.querySelectorAll('.lang-switch button').forEach(b=>{
-                    if(b.dataset.lang === lang) b.classList.add('active'); else b.classList.remove('active');
-                });
+                try{
+                    document.querySelectorAll('.lang').forEach(el=>{
+                        el.style.display = (el.dataset.lang === lang) ? '' : 'none';
+                    });
+                    try{ document.documentElement.lang = lang; }catch(e){}
+                    try{ localStorage.setItem('quria_lang', lang); }catch(e){}
+                    const sel = document.getElementById('lang-select') || document.querySelector('.lang-switch select');
+                    if(sel) sel.value = lang;
+                    console.debug('[quria] showLang ->', lang);
+                }catch(err){ console.error('[quria] showLang error', err); }
             }
 
-            document.querySelectorAll('.lang-switch button').forEach(btn=>{
-                btn.addEventListener('click', ()=> showLang(btn.dataset.lang));
-            });
+            function init(){
+                const select = document.getElementById('lang-select') || document.querySelector('.lang-switch select');
+                if(select){
+                    select.addEventListener('change', function(){ showLang(this.value); });
+                } else {
+                    console.warn('[quria] lang-select not found');
+                }
 
-            const lang = getPreferredLang();
-            showLang(lang);
+                const lang = getPreferredLang();
+                showLang(lang);
+            }
+
+            if(document.readyState === 'loading'){
+                document.addEventListener('DOMContentLoaded', init);
+            } else {
+                init();
+            }
         })();
     </script>
 </body>

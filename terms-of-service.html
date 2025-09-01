@@ -50,18 +50,13 @@
             gap: 8px;
             align-items: center;
         }
-        .lang-switch button {
-            background: #f1f1f1;
+        .lang-switch select {
+            background: #fff;
             border: 1px solid #ddd;
-            padding: 6px 10px;
+            padding: 6px 8px;
             border-radius: 4px;
             cursor: pointer;
             font-size: 14px;
-        }
-        .lang-switch button.active {
-            background: #3498db;
-            color: #fff;
-            border-color: #3498db;
         }
     </style>
 </head>
@@ -69,10 +64,12 @@
     <header>
         <h1>Terms of Use</h1>
         <div class="lang-switch" aria-label="Language selector">
-            <label for="lang">Language:</label>
-            <button data-lang="en" id="btn-en">EN</button>
-            <button data-lang="ja" id="btn-ja">日本語</button>
-            <button data-lang="zh" id="btn-zh">中文</button>
+            <label for="lang-select">Language:</label>
+            <select id="lang-select" aria-label="Language selector">
+                <option value="en">EN</option>
+                <option value="ja">日本語</option>
+                <option value="zh">中文</option>
+            </select>
         </div>
     </header>
 
@@ -387,14 +384,14 @@
                 });
                 try{ document.documentElement.lang = lang; }catch(e){}
                 localStorage.setItem('quria_lang', lang);
-                document.querySelectorAll('.lang-switch button').forEach(b=>{
-                    if(b.dataset.lang === lang) b.classList.add('active'); else b.classList.remove('active');
-                });
+                const sel = document.getElementById('lang-select');
+                if(sel) sel.value = lang;
             }
 
-            document.querySelectorAll('.lang-switch button').forEach(btn=>{
-                btn.addEventListener('click', ()=> showLang(btn.dataset.lang));
-            });
+            const select = document.getElementById('lang-select');
+            if(select){
+                select.addEventListener('change', ()=> showLang(select.value));
+            }
 
             const lang = getPreferredLang();
             showLang(lang);
