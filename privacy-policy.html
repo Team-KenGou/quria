@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>プライバシーポリシー - Quria</title>
+    <title>Privacy Policy - Quria</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -14,10 +14,17 @@
             padding: 20px;
             color: #333;
         }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
         h1 {
             color: #2c3e50;
             border-bottom: 2px solid #3498db;
             padding-bottom: 10px;
+            margin: 0;
         }
         h2 {
             color: #34495e;
@@ -46,142 +53,481 @@
             border-left: 4px solid #ffc107;
             margin: 15px 0;
         }
+        .lang-switch {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        .lang-switch button {
+            background: #f1f1f1;
+            border: 1px solid #ddd;
+            padding: 6px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .lang-switch button.active {
+            background: #3498db;
+            color: #fff;
+            border-color: #3498db;
+        }
     </style>
 </head>
 <body>
-    <h1>プライバシーポリシー</h1>
-    
-    <div class="last-updated">
-        <strong>最終更新日：</strong>2025年8月17日<br>
-        <strong>提供者：</strong>IGA Factory<br>
-        <strong>連絡先：</strong>igafactory2023@gmail.com
-    </div>
+    <header>
+        <h1>Privacy Policy</h1>
+        <div class="lang-switch" aria-label="Language selector">
+            <label for="lang">Language:</label>
+            <button data-lang="en" id="btn-en">EN</button>
+            <button data-lang="ja" id="btn-ja">日本語</button>
+            <button data-lang="zh" id="btn-zh">中文</button>
+        </div>
+    </header>
 
-    <div class="section">
-        <h2>1. はじめに</h2>
-        <p>IGA Factory（以下「当社」）は、「Quria」アプリケーション（以下「本アプリ」）におけるユーザーの個人情報の保護について、適切な取り扱いと保護を徹底することを社会的責務と考えています。本プライバシーポリシーは、当社が収集・利用・管理する個人情報について定めるものです。</p>
-    </div>
+    <!-- English -->
+    <article class="lang" data-lang="en">
+        <div class="last-updated">
+            <strong>Last Updated:</strong> August 17, 2025<br>
+            <strong>Provider:</strong> IGA Factory<br>
+            <strong>Contact:</strong> igafactory2023@gmail.com
+        </div>
 
-    <div class="section">
-        <h2>2. 収集する情報</h2>
-        <p>当社は、本アプリの提供にあたり、以下の情報を収集する場合があります：</p>
-        
-        <h3>2.1 ユーザーが直接提供する情報</h3>
-        <ul>
-            <li>アカウント登録情報（メールアドレス、ユーザー名等）</li>
-            <li>学習履歴および進捗データ</li>
-            <li>カリキュラム生成のためのトピック入力</li>
-            <li>お問い合わせ内容</li>
-        </ul>
+        <div class="section">
+            <h2>1. Introduction</h2>
+            <p>IGA Factory (hereinafter referred to as "we" or "our company") considers it a social responsibility to properly handle and protect users’ personal information in the "Quria" application (hereinafter referred to as "the App"). This Privacy Policy outlines how we collect, use, and manage personal information.</p>
+        </div>
 
-        <h3>2.2 自動的に収集される情報</h3>
-        <ul>
-            <li>デバイス情報（OS、アプリバージョン、デバイス識別子等）</li>
-            <li>利用統計情報（アプリの使用頻度、機能の利用状況等）</li>
-            <li>クラッシュレポートおよびエラー情報</li>
-            <li>IPアドレス（サーバーアクセスログ）</li>
-        </ul>
-
-        <h3>2.3 広告関連の情報</h3>
-        <div class="highlight">
-            <p><strong>広告表示について：</strong>本アプリは無料サービスとして提供されており、サービスの運営費用を賄うため広告が表示されます。広告配信のために以下の情報が収集される場合があります：</p>
+        <div class="section">
+            <h2>2. Information We Collect</h2>
+            <p>We may collect the following information when providing the App:</p>
+            
+            <h3>2.1 Information Provided Directly by Users</h3>
             <ul>
-                <li>広告識別子（IDFA/AAID）</li>
-                <li>広告の表示・クリック履歴</li>
-                <li>デバイス情報（広告配信の最適化のため）</li>
+                <li>Account registration information (email address, username, etc.)</li>
+                <li>Learning history and progress data</li>
+                <li>Input topics for curriculum generation</li>
+                <li>Inquiries or communications</li>
+            </ul>
+
+            <h3>2.2 Information Collected Automatically</h3>
+            <ul>
+                <li>Device information (OS, app version, device identifiers, etc.)</li>
+                <li>Usage statistics (frequency of app use, feature usage, etc.)</li>
+                <li>Crash reports and error logs</li>
+                <li>IP address (server access logs)</li>
+            </ul>
+
+            <h3>2.3 Advertising Information</h3>
+            <div class="highlight">
+                <p><strong>Regarding Advertisements:</strong> The App is provided as a free service, and advertisements are displayed to cover operational costs. For ad delivery, the following information may be collected:</p>
+                <ul>
+                    <li>Advertising identifiers (IDFA/AAID)</li>
+                    <li>Ad impression and click history</li>
+                    <li>Device information (for ad optimization)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>3. Purpose of Use</h2>
+            <p>The collected information will be used for the following purposes:</p>
+            <ul>
+                <li>Provision and operation of the App</li>
+                <li>AI-based curriculum generation and problem creation</li>
+                <li>Management and analysis of learning progress</li>
+                <li>Improvement of services and development of new features</li>
+                <li>Provision of user support</li>
+                <li>Ad delivery and optimization</li>
+                <li>Prevention of misuse or fraud</li>
+                <li>Compliance with legal obligations</li>
             </ul>
         </div>
-    </div>
 
-    <div class="section">
-        <h2>3. 情報の利用目的</h2>
-        <p>収集した情報は、以下の目的で利用されます：</p>
-        <ul>
-            <li>本アプリの提供および運営</li>
-            <li>AIによるカリキュラム生成および問題作成</li>
-            <li>学習進捗の管理および分析</li>
-            <li>サービスの改善および新機能の開発</li>
-            <li>ユーザーサポートの提供</li>
-            <li>広告の配信および最適化</li>
-            <li>不正利用の防止</li>
-            <li>法令に基づく対応</li>
-        </ul>
-    </div>
+        <div class="section">
+            <h2>4. Sharing and Disclosure of Information</h2>
+            <p>We will not provide users’ personal information to third parties except in the following cases:</p>
+            <ul>
+                <li>When prior consent has been obtained from the user</li>
+                <li>When required by law</li>
+                <li>When necessary to protect human life, body, or property</li>
+                <li>When especially necessary for the improvement of public health or the sound development of children</li>
+                <li>When cooperation is required with government agencies or local authorities in carrying out their legal duties</li>
+            </ul>
 
-    <div class="section">
-        <h2>4. 情報の共有・開示</h2>
-        <p>当社は、以下の場合を除き、ユーザーの個人情報を第三者に提供しません：</p>
-        <ul>
-            <li>ユーザーの事前の同意がある場合</li>
-            <li>法令に基づく場合</li>
-            <li>人の生命、身体または財産の保護のために必要な場合</li>
-            <li>公衆衛生の向上または児童の健全な育成の推進のために特に必要な場合</li>
-            <li>国の機関もしくは地方公共団体またはその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合</li>
-        </ul>
+            <h3>4.1 Sharing with Advertising Partners</h3>
+            <p>For ad distribution, the following information may be shared with advertising partners:</p>
+            <ul>
+                <li>Advertising identifiers</li>
+                <li>Device information (OS, screen size, etc.)</li>
+                <li>Ad impression and click history</li>
+            </ul>
+        </div>
 
-        <h3>4.1 広告パートナーとの共有</h3>
-        <p>広告配信のため、以下の情報が広告パートナーと共有される場合があります：</p>
-        <ul>
-            <li>広告識別子</li>
-            <li>デバイス情報（OS、画面サイズ等）</li>
-            <li>広告の表示・クリック履歴</li>
-        </ul>
-    </div>
+        <div class="section">
+            <h2>5. Management and Protection of Information</h2>
+            <p>We take the following measures to properly manage and protect personal information:</p>
+            <ul>
+                <li>Restricting access to personal information</li>
+                <li>Data encryption</li>
+                <li>Regular security audits</li>
+                <li>Employee education and training</li>
+            </ul>
+        </div>
 
-    <div class="section">
-        <h2>5. 情報の管理・保護</h2>
-        <p>当社は、ユーザーの個人情報の適切な管理および保護のため、以下の措置を講じています：</p>
-        <ul>
-            <li>個人情報へのアクセス制限</li>
-            <li>データの暗号化</li>
-            <li>定期的なセキュリティ監査</li>
-            <li>従業員への教育・研修</li>
-        </ul>
-    </div>
+        <div class="section">
+            <h2>6. Retention Period</h2>
+            <p>We retain personal information for as long as necessary to achieve the purposes described. Specific retention periods are as follows:</p>
+            <ul>
+                <li>Account information: Until account deletion</li>
+                <li>Learning history: Until account deletion</li>
+                <li>Usage statistics: 2 years</li>
+                <li>Advertising-related information: 1 year</li>
+            </ul>
+        </div>
 
-    <div class="section">
-        <h2>6. 情報の保持期間</h2>
-        <p>当社は、利用目的の達成に必要な期間、個人情報を保持します。具体的な保持期間は以下の通りです：</p>
-        <ul>
-            <li>アカウント情報：アカウント削除まで</li>
-            <li>学習履歴：アカウント削除まで</li>
-            <li>利用統計情報：2年間</li>
-            <li>広告関連情報：1年間</li>
-        </ul>
-    </div>
+        <div class="section">
+            <h2>7. User Rights</h2>
+            <p>Users have the following rights:</p>
+            <ul>
+                <li>Request for disclosure of personal information</li>
+                <li>Request for correction, addition, or deletion of personal information</li>
+                <li>Request for suspension or erasure of personal information use</li>
+                <li>Request for suspension of third-party provision of personal information</li>
+            </ul>
+            <p>For these requests, please contact us at the contact information below.</p>
+        </div>
 
-    <div class="section">
-        <h2>7. ユーザーの権利</h2>
-        <p>ユーザーは、以下の権利を有します：</p>
-        <ul>
-            <li>個人情報の開示請求</li>
-            <li>個人情報の訂正・追加・削除請求</li>
-            <li>個人情報の利用停止・消去請求</li>
-            <li>個人情報の第三者提供の停止請求</li>
-        </ul>
-        <p>これらの請求については、以下の連絡先までお問い合わせください。</p>
-    </div>
+        <div class="section">
+            <h2>8. Cookies and Similar Technologies</h2>
+            <p>The App may use cookies and similar technologies to enhance user experience and optimize ad delivery. Information collected through these technologies will be handled in accordance with this Privacy Policy.</p>
+        </div>
 
-    <div class="section">
-        <h2>8. クッキーおよび類似技術</h2>
-        <p>本アプリでは、ユーザー体験の向上および広告配信の最適化のため、クッキーおよび類似技術を使用する場合があります。これらの技術により収集される情報は、本プライバシーポリシーに従って取り扱われます。</p>
-    </div>
+        <div class="section">
+            <h2>9. Children’s Privacy</h2>
+            <p>We do not knowingly collect personal information from children under the age of 13. If personal information from children under 13 is inadvertently collected, it will be promptly deleted.</p>
+        </div>
 
-    <div class="section">
-        <h2>9. 児童のプライバシー</h2>
-        <p>当社は、13歳未満の児童から意図的に個人情報を収集しません。13歳未満の児童の個人情報が誤って収集された場合、速やかに削除いたします。</p>
-    </div>
+        <div class="section">
+            <h2>10. Changes to the Privacy Policy</h2>
+            <p>We may update this Privacy Policy as necessary. In the event of significant changes, users will be notified via the App or email.</p>
+        </div>
 
-    <div class="section">
-        <h2>10. プライバシーポリシーの変更</h2>
-        <p>当社は、必要に応じて本プライバシーポリシーを変更することがあります。重要な変更がある場合は、アプリ内またはメールでお知らせいたします。</p>
-    </div>
+        <div class="section">
+            <h2>11. Contact</h2>
+            <p>If you have any questions regarding this Privacy Policy, please contact us at:</p>
+            <p><strong>IGA Factory</strong><br>
+            Email: igafactory2023@gmail.com</p>
+        </div>
+    </article>
 
-    <div class="section">
-        <h2>11. お問い合わせ</h2>
-        <p>本プライバシーポリシーに関するお問い合わせは、以下の連絡先までお願いいたします：</p>
-        <p><strong>IGA Factory</strong><br>
-        メール：igafactory2023@gmail.com</p>
-    </div>
+    <!-- Japanese -->
+    <article class="lang" data-lang="ja" style="display:none">
+        <div class="last-updated">
+            <strong>最終更新日：</strong>2025年8月17日<br>
+            <strong>提供者：</strong>IGA Factory<br>
+            <strong>連絡先：</strong>igafactory2023@gmail.com
+        </div>
+
+        <div class="section">
+            <h2>1. はじめに</h2>
+            <p>IGA Factory（以下「当社」）は、「Quria」アプリケーション（以下「本アプリ」）におけるユーザーの個人情報の保護について、適切な取り扱いと保護を徹底することを社会的責務と考えています。本プライバシーポリシーは、当社が収集・利用・管理する個人情報について定めるものです。</p>
+        </div>
+
+        <div class="section">
+            <h2>2. 収集する情報</h2>
+            <p>当社は、本アプリの提供にあたり、以下の情報を収集する場合があります：</p>
+            
+            <h3>2.1 ユーザーが直接提供する情報</h3>
+            <ul>
+                <li>アカウント登録情報（メールアドレス、ユーザー名等）</li>
+                <li>学習履歴および進捗データ</li>
+                <li>カリキュラム生成のためのトピック入力</li>
+                <li>お問い合わせ内容</li>
+            </ul>
+
+            <h3>2.2 自動的に収集される情報</h3>
+            <ul>
+                <li>デバイス情報（OS、アプリバージョン、デバイス識別子等）</li>
+                <li>利用統計情報（アプリの使用頻度、機能の利用状況等）</li>
+                <li>クラッシュレポートおよびエラー情報</li>
+                <li>IPアドレス（サーバーアクセスログ）</li>
+            </ul>
+
+            <h3>2.3 広告関連の情報</h3>
+            <div class="highlight">
+                <p><strong>広告表示について：</strong>本アプリは無料サービスとして提供されており、サービスの運営費用を賄うため広告が表示されます。広告配信のために以下の情報が収集される場合があります：</p>
+                <ul>
+                    <li>広告識別子（IDFA/AAID）</li>
+                    <li>広告の表示・クリック履歴</li>
+                    <li>デバイス情報（広告配信の最適化のため）</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>3. 情報の利用目的</h2>
+            <p>収集した情報は、以下の目的で利用されます：</p>
+            <ul>
+                <li>本アプリの提供および運営</li>
+                <li>AIによるカリキュラム生成および問題作成</li>
+                <li>学習進捗の管理および分析</li>
+                <li>サービスの改善および新機能の開発</li>
+                <li>ユーザーサポートの提供</li>
+                <li>広告の配信および最適化</li>
+                <li>不正利用の防止</li>
+                <li>法令に基づく対応</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>4. 情報の共有・開示</h2>
+            <p>当社は、以下の場合を除き、ユーザーの個人情報を第三者に提供しません：</p>
+            <ul>
+                <li>ユーザーの事前の同意がある場合</li>
+                <li>法令に基づく場合</li>
+                <li>人の生命、身体または財産の保護のために必要な場合</li>
+                <li>公衆衛生の向上または児童の健全な育成の推進のために特に必要な場合</li>
+                <li>国の機関もしくは地方公共団体またはその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合</li>
+            </ul>
+
+            <h3>4.1 広告パートナーとの共有</h3>
+            <p>広告配信のため、以下の情報が広告パートナーと共有される場合があります：</p>
+            <ul>
+                <li>広告識別子</li>
+                <li>デバイス情報（OS、画面サイズ等）</li>
+                <li>広告の表示・クリック履歴</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>5. 情報の管理・保護</h2>
+            <p>当社は、ユーザーの個人情報の適切な管理および保護のため、以下の措置を講じています：</p>
+            <ul>
+                <li>個人情報へのアクセス制限</li>
+                <li>データの暗号化</li>
+                <li>定期的なセキュリティ監査</li>
+                <li>従業員への教育・研修</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>6. 情報の保持期間</h2>
+            <p>当社は、利用目的の達成に必要な期間、個人情報を保持します。具体的な保持期間は以下の通りです：</p>
+            <ul>
+                <li>アカウント情報：アカウント削除まで</li>
+                <li>学習履歴：アカウント削除まで</li>
+                <li>利用統計情報：2年間</li>
+                <li>広告関連情報：1年間</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>7. ユーザーの権利</h2>
+            <p>ユーザーは、以下の権利を有します：</p>
+            <ul>
+                <li>個人情報の開示請求</li>
+                <li>個人情報の訂正・追加・削除請求</li>
+                <li>個人情報の利用停止・消去請求</li>
+                <li>個人情報の第三者提供の停止請求</li>
+            </ul>
+            <p>これらの請求については、以下の連絡先までお問い合わせください。</p>
+        </div>
+
+        <div class="section">
+            <h2>8. クッキーおよび類似技術</h2>
+            <p>本アプリでは、ユーザー体験の向上および広告配信の最適化のため、クッキーおよび類似技術を使用する場合があります。これらの技術により収集される情報は、本プライバシーポリシーに従って取り扱われます。</p>
+        </div>
+
+        <div class="section">
+            <h2>9. 児童のプライバシー</h2>
+            <p>当社は、13歳未満の児童から意図的に個人情報を収集しません。13歳未満の児童の個人情報が誤って収集された場合、速やかに削除いたします。</p>
+        </div>
+
+        <div class="section">
+            <h2>10. プライバシーポリシーの変更</h2>
+            <p>当社は、必要に応じて本プライバシーポリシーを変更することがあります。重要な変更がある場合は、アプリ内またはメールでお知らせいたします。</p>
+        </div>
+
+        <div class="section">
+            <h2>11. お問い合わせ</h2>
+            <p>本プライバシーポリシーに関するお問い合わせは、以下の連絡先までお願いいたします：</p>
+            <p><strong>IGA Factory</strong><br>
+            メール：igafactory2023@gmail.com</p>
+        </div>
+    </article>
+
+    <!-- Chinese -->
+    <article class="lang" data-lang="zh" style="display:none">
+        <div class="last-updated">
+            <strong>最后更新日期：</strong>2025年8月17日<br>
+            <strong>提供方：</strong>IGA Factory<br>
+            <strong>联系方式：</strong>igafactory2023@gmail.com
+        </div>
+
+        <div class="section">
+            <h2>1. 前言</h2>
+            <p>IGA Factory（以下简称“本公司”）认为，在“Quria”应用程序（以下简称“本应用”）中妥善处理和保护用户的个人信息，是我们应尽的社会责任。本隐私政策规定了本公司如何收集、使用和管理个人信息。</p>
+        </div>
+
+        <div class="section">
+            <h2>2. 我们收集的信息</h2>
+            <p>在提供本应用时，我们可能会收集以下信息：</p>
+            
+            <h3>2.1 用户直接提供的信息</h3>
+            <ul>
+                <li>账户注册信息（电子邮箱、用户名等）</li>
+                <li>学习记录和进度数据</li>
+                <li>用于生成课程的主题输入</li>
+                <li>咨询或反馈内容</li>
+            </ul>
+
+            <h3>2.2 自动收集的信息</h3>
+            <ul>
+                <li>设备信息（操作系统、应用版本、设备标识符等）</li>
+                <li>使用统计信息（使用频率、功能使用情况等）</li>
+                <li>崩溃报告及错误信息</li>
+                <li>IP地址（服务器访问日志）</li>
+            </ul>
+
+            <h3>2.3 广告相关信息</h3>
+            <div class="highlight">
+                <p><strong>关于广告：</strong>本应用作为免费服务提供，为了支付运营成本，会显示广告。为进行广告投放，可能会收集以下信息：</p>
+                <ul>
+                    <li>广告标识符（IDFA/AAID）</li>
+                    <li>广告展示与点击记录</li>
+                    <li>设备信息（用于广告投放优化）</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>3. 信息的使用目的</h2>
+            <p>收集的信息将用于以下目的：</p>
+            <ul>
+                <li>提供和运营本应用</li>
+                <li>基于AI的课程生成与题目创建</li>
+                <li>学习进度的管理与分析</li>
+                <li>改进服务与开发新功能</li>
+                <li>提供用户支持</li>
+                <li>广告投放与优化</li>
+                <li>防止不正当使用</li>
+                <li>符合法律法规要求</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>4. 信息的共享与披露</h2>
+            <p>除以下情况外，我们不会向第三方提供用户的个人信息：</p>
+            <ul>
+                <li>事先获得用户同意时</li>
+                <li>符合法律法规要求时</li>
+                <li>为保护生命、身体或财产所必需时</li>
+                <li>为促进公共卫生或儿童健康成长所特别必要时</li>
+                <li>为协助国家机关或地方政府履行法律规定的事务时</li>
+            </ul>
+
+            <h3>4.1 与广告合作伙伴共享</h3>
+            <p>为广告投放，可能会与广告合作伙伴共享以下信息：</p>
+            <ul>
+                <li>广告标识符</li>
+                <li>设备信息（操作系统、屏幕尺寸等）</li>
+                <li>广告展示与点击记录</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>5. 信息的管理与保护</h2>
+            <p>我们采取以下措施来妥善管理和保护个人信息：</p>
+            <ul>
+                <li>限制对个人信息的访问</li>
+                <li>数据加密</li>
+                <li>定期安全审计</li>
+                <li>员工培训与教育</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>6. 信息的保存期限</h2>
+            <p>我们将在实现使用目的所需期间内保存个人信息。具体保存期限如下：</p>
+            <ul>
+                <li>账户信息：直到账户被删除</li>
+                <li>学习记录：直到账户被删除</li>
+                <li>使用统计信息：2年</li>
+                <li>广告相关信息：1年</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>7. 用户权利</h2>
+            <p>用户享有以下权利：</p>
+            <ul>
+                <li>请求公开个人信息</li>
+                <li>请求更正、补充或删除个人信息</li>
+                <li>请求停止使用或删除个人信息</li>
+                <li>请求停止向第三方提供个人信息</li>
+            </ul>
+            <p>如需行使这些权利，请通过以下联系方式与我们联系。</p>
+        </div>
+
+        <div class="section">
+            <h2>8. Cookie及类似技术</h2>
+            <p>本应用可能使用Cookie及类似技术，以提升用户体验和优化广告投放。通过这些技术收集的信息将按照本隐私政策处理。</p>
+        </div>
+
+        <div class="section">
+            <h2>9. 儿童隐私</h2>
+            <p>我们不会有意收集13岁以下儿童的个人信息。如不慎收集，将立即删除。</p>
+        </div>
+
+        <div class="section">
+            <h2>10. 隐私政策的变更</h2>
+            <p>我们可能会根据需要更新本隐私政策。如有重大变更，将通过应用内或电子邮件通知用户。</p>
+        </div>
+
+        <div class="section">
+            <h2>11. 联系方式</h2>
+            <p>如对本隐私政策有任何疑问，请联系我们：</p>
+            <p><strong>IGA Factory</strong><br>
+            邮箱：igafactory2023@gmail.com</p>
+        </div>
+    </article>
+
+    <script>
+        (function(){
+            const supported = ['en','ja','zh'];
+            const defaultLang = 'en'; // requirement: default to English
+
+            function getPreferredLang(){
+                const stored = localStorage.getItem('quria_lang');
+                if(stored && supported.includes(stored)) return stored;
+                const nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+                if(!nav) return defaultLang;
+                const primary = nav.split('-')[0];
+                return supported.includes(primary) ? primary : defaultLang;
+            }
+
+            function showLang(lang){
+                document.querySelectorAll('.lang').forEach(el=>{
+                    el.style.display = (el.dataset.lang === lang) ? '' : 'none';
+                });
+                // update lang attribute for accessibility and SEO
+                try{ document.documentElement.lang = lang; }catch(e){}
+                localStorage.setItem('quria_lang', lang);
+                // update buttons
+                document.querySelectorAll('.lang-switch button').forEach(b=>{
+                    if(b.dataset.lang === lang) b.classList.add('active'); else b.classList.remove('active');
+                });
+            }
+
+            // attach selector handlers
+            document.querySelectorAll('.lang-switch button').forEach(btn=>{
+                btn.addEventListener('click', ()=> showLang(btn.dataset.lang));
+            });
+
+            // initial selection
+            const lang = getPreferredLang();
+            showLang(lang);
+        })();
+    </script>
 </body>
 </html>
