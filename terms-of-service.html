@@ -58,6 +58,8 @@
             cursor: pointer;
             font-size: 14px;
         }
+        .disclaimer-banner { background-color:#fff3cd; border-left:4px solid #ffc107; padding:12px 14px; border-radius:6px; margin:16px 0; color:#5c4b00; }
+        .disclaimer-banner strong { color:#8a6d00; }
     </style>
 </head>
 <body>
@@ -72,6 +74,16 @@
             </select>
         </div>
     </header>
+
+    <!-- Multilingual disclaimer: shown only when non-Japanese is selected -->
+    <div class="disclaimer" aria-live="polite">
+        <div class="disclaimer-banner" data-lang="en" style="display:none">
+            <strong>Notice:</strong> Only the Japanese version is the official and legally binding text. This translation is provided for convenience. In case of any discrepancy, the Japanese version prevails.
+        </div>
+        <div class="disclaimer-banner" data-lang="zh" style="display:none">
+            <strong>提示：</strong>仅日文版为正式且具有法律效力的文本。本译文仅供参考。若与日文版存在不一致之处，以日文版为准。
+        </div>
+    </div>
 
     <!-- English -->
     <article class="lang" data-lang="en">
@@ -386,6 +398,14 @@
                 localStorage.setItem('quria_lang', lang);
                 const sel = document.getElementById('lang-select');
                 if(sel) sel.value = lang;
+                // Toggle disclaimer for non-Japanese languages only
+                document.querySelectorAll('.disclaimer-banner').forEach(el => {
+                    if (lang !== 'ja' && el.dataset.lang === lang) {
+                        el.style.display = '';
+                    } else {
+                        el.style.display = 'none';
+                    }
+                });
             }
 
             const select = document.getElementById('lang-select');
