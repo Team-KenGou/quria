@@ -47,6 +47,10 @@
         .contact-info { background-color: #d1ecf1; padding: 15px; border-radius: 5px; border-left: 4px solid #17a2b8; margin: 15px 0; }
     .lang-switch { display:flex; gap:8px; align-items:center; }
     .lang-switch select { background:#fff; border:1px solid #ddd; padding:6px 8px; border-radius:4px; cursor:pointer; font-size:14px; }
+    /* RTL support for Arabic articles */
+    article[dir="rtl"] { direction: rtl; text-align: right; }
+    /* keep the language selector LTR for usability */
+    .lang-switch { direction: ltr; }
         .disclaimer-banner { background-color:#fff3cd; border-left:4px solid #ffc107; padding:12px 14px; border-radius:6px; margin:16px 0; color:#5c4b00; }
         .disclaimer-banner strong { color:#8a6d00; }
     .contact-button { display:inline-block; background:#3498db; color:#fff; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:600; border:1px solid #2980b9; }
@@ -69,6 +73,7 @@
                 <option value="fr">Français</option>
                 <option value="ko">한국어</option>
                 <option value="hi">हिन्दी</option>
+                <option value="ar">العربية</option>
             </select>
         </div>
     </header>
@@ -101,6 +106,9 @@
         </div>
         <div class="disclaimer-banner" data-lang="hi" style="display:none">
             <strong>सूचना:</strong> केवल जापानी संस्करण आधिकारिक और कानूनी रूप से बाध्यकारी पाठ है। यह अनुवाद सुविधा के लिए प्रदान किया गया है। किसी भी असंगति की स्थिति में जापानी संस्करण प्राथमिक होगा。
+        </div>
+        <div class="disclaimer-banner" data-lang="ar" style="display:none">
+            <strong>تنبيه:</strong> النسخة اليابانية فقط هي النص الرسمي والملزم قانونيًا. هذه الترجمة مُقدمة لراحتك. في حالة وجود أي تعارض، تسود النسخة اليابانية.
         </div>
     </div>
 
@@ -299,6 +307,205 @@
                 <li>Sharing best practices for data protection</li>
                 <li>Guidance on privacy settings</li>
                 <li>Regular updates on privacy-related matters</li>
+            </ul>
+        </div>
+    </article>
+
+    <!-- Arabic (RTL) -->
+    <article class="lang" data-lang="ar" dir="rtl" style="display:none">
+        <div class="last-updated">
+            <strong>آخر تحديث:</strong> 17 أغسطس 2025<br>
+            <strong>المزود:</strong> IGA Factory<br>
+        </div>
+
+        <div class="section">
+            <h2>1. الالتزام بالخصوصية</h2>
+            <p>تضع IGA Factory أولوية قصوى لحماية خصوصية مستخدمي تطبيق Quria (المشار إليه فيما يلي بـ "التطبيق"). يوضح هذا المستند جهودنا لحماية خصوصية المستخدمين والإجراءات التي يمكن للمستخدمين اتخاذها.</p>
+        </div>
+
+        <div class="section">
+            <h2>2. شفافية البيانات</h2>
+            <div class="data-transparency"><p><strong>مبدأ الشفافية:</strong> نلتزم بتوفير شفافية كاملة بشأن كيفية جمع بيانات المستخدمين واستخدامها.</p></div>
+            <h3>2.1 أنواع البيانات التي يتم جمعها</h3>
+            <ul>
+                <li><strong>بيانات التعلم:</strong> تقدم التعلم، سجل المناهج، سجل الإجابات</li>
+                <li><strong>معلومات الحساب:</strong> عنوان البريد الإلكتروني، اسم المستخدم (عند التسجيل)</li>
+                <li><strong>البيانات الفنية:</strong> معلومات الجهاز، إحصاءات استخدام التطبيق، سجلات الأخطاء</li>
+                <li><strong>بيانات الإعلان:</strong> معرفات الإعلانات، سجل مرات ظهور ونقرات الإعلانات</li>
+            </ul>
+            <h3>2.2 أسباب استخدام البيانات</h3>
+            <ul>
+                <li>تحسين المناهج المُنشأة بواسطة الذكاء الاصطناعي</li>
+                <li>تخصيص تجربة التعلم</li>
+                <li>تحسين ميزات التطبيق وإصلاح الأخطاء</li>
+                <li>عرض الإعلانات وتحسينها</li>
+                <li>تقديم دعم المستخدم</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>3. ضوابط خصوصية المستخدم</h2>
+            <div class="privacy-controls"><p><strong>حقوق المستخدم:</strong> لدى المستخدمين الحقوق التالية، ويمكنهم ممارستها في أي وقت.</p></div>
+            <h3>3.1 حق الوصول</h3>
+            <ul>
+                <li>الحق في مراجعة بياناتهم</li>
+                <li>الحق في الاستفسار عن كيفية جمع البيانات واستخدامها</li>
+                <li>الحق في طلب توضيحات بشأن طرق معالجة البيانات</li>
+            </ul>
+            <h3>3.2 حق التصحيح</h3>
+            <ul>
+                <li>الحق في طلب تصحيح البيانات غير الدقيقة</li>
+                <li>الحق في استكمال البيانات الناقصة</li>
+                <li>الحق في تحديث معلومات الحساب</li>
+            </ul>
+            <h3>3.3 حق المسح</h3>
+            <ul>
+                <li>حذف الحساب بالكامل</li>
+                <li>طلب حذف بيانات محددة</li>
+                <li>حذف سجل التعلم</li>
+            </ul>
+            <h3>3.4 حق تقييد المعالجة</h3>
+            <ul>
+                <li>الحق في تعليق معالجة البيانات مؤقتًا</li>
+                <li>الحق في تقييد استخدام البيانات لأغراض محددة</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>4. الإعلانات والخصوصية</h2>
+            <p>يتم توفير التطبيق كخدمة مجانية، وتُعرض الإعلانات لتغطية تكاليف التشغيل.</p>
+            <h3>4.1 جمع بيانات الإعلان</h3>
+            <ul>
+                <li>استخدام معرفات الإعلانات (IDFA/AAID)</li>
+                <li>سجل مرات ظهور ونقرات الإعلانات</li>
+                <li>معلومات الجهاز (لتحسين الإعلانات)</li>
+            </ul>
+            <h3>4.2 إعدادات خصوصية الإعلانات</h3>
+            <ul>
+                <li>يمكن تعطيل معرفات الإعلانات في إعدادات الجهاز</li>
+                <li>يمكن تقييد تخصيص الإعلانات</li>
+                <li>يمكن طلب حذف البيانات المتعلقة بالإعلانات</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>5. حماية البيانات والأمن</h2>
+            <h3>5.1 الضمانات التقنية</h3>
+            <ul>
+                <li>تشفير البيانات (أثناء النقل والتخزين)</li>
+                <li>التحكم في الوصول والمصادقة</li>
+                <li>تدقيقات أمنية منتظمة</li>
+                <li>نسخ احتياطية لقاعدة البيانات</li>
+            </ul>
+            <h3>5.2 الضمانات التنظيمية</h3>
+            <ul>
+                <li>تدريب الموظفين على الخصوصية</li>
+                <li>تقليل وصول البيانات إلى الحد الأدنى</li>
+                <li>نظام استجابة للحوادث</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>6. الاحتفاظ بالبيانات</h2>
+            <p>نحتفظ بالبيانات فقط للمدة الدنيا اللازمة:</p>
+            <ul>
+                <li><strong>معلومات الحساب:</strong> حتى حذف الحساب</li>
+                <li><strong>سجل التعلم:</strong> حتى حذف الحساب</li>
+                <li><strong>إحصاءات الاستخدام:</strong> سنتان</li>
+                <li><strong>بيانات الإعلان:</strong> سنة واحدة</li>
+                <li><strong>سجلات الأخطاء:</strong> 6 أشهر</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>7. مشاركة البيانات مع أطراف ثالثة</h2>
+            <p>لا نشارك البيانات الشخصية للمستخدمين مع أطراف ثالثة إلا في الحالات التالية:</p>
+            <ul>
+                <li>عند الحصول على موافقة صريحة من المستخدم</li>
+                <li>عندما يقتضي القانون ذلك</li>
+                <li>مشاركة دنيا لازمة مع شركاء الإعلان (لتوزيع الإعلانات)</li>
+                <li>المشاركة مع شركاء موثوقين لتقديم الخدمة</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>8. نقل البيانات دوليًا</h2>
+            <p>نعالج البيانات أساسًا داخل اليابان. ومع ذلك، قد تحدث عمليات نقل دولية في الحالات التالية:</p>
+            <ul>
+                <li>استخدام خدمات السحابة (مع الضمانات المناسبة)</li>
+                <li>التعاون مع شركاء الإعلان (مع الضمانات المناسبة)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>9. خصوصية الأطفال</h2>
+            <p>نولي أهمية خاصة لحماية خصوصية الأطفال:</p>
+            <ul>
+                <li>لا نجمع عمدًا معلومات شخصية من الأطفال دون سن 13</li>
+                <li>إذا تم جمع بيانات أطفال بطريق الخطأ، فسيتم حذفها على الفور</li>
+                <li>لا نعالج بيانات الأطفال دون موافقة الوالدين</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>10. إدارة إعدادات الخصوصية</h2>
+            <p>داخل التطبيق، يمكن للمستخدمين إدارة إعدادات الخصوصية التالية:</p>
+            <ul>
+                <li>السماح أو رفض جمع البيانات</li>
+                <li>إعدادات تخصيص الإعلانات</li>
+                <li>إعدادات إرسال بيانات التحليلات</li>
+                <li>إعدادات إشعارات الدفع</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>11. الإبلاغ عن انتهاكات الخصوصية</h2>
+            <p>إذا شككت بحدوث انتهاك للخصوصية، يرجى الإبلاغ عنه باتباع الخطوات التالية:</p>
+            <ol>
+                <li>تسجيل الظروف التفصيلية</li>
+                <li>حفظ الأدلة الداعمة مثل لقطات الشاشة أو السجلات</li>
+                <li>الإبلاغ إلى عنوان الاتصال الخاص بنا</li>
+                <li>النظر في الإبلاغ إلى الجهات المختصة إذا لزم الأمر</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>12. تحديثات سياسة الخصوصية</h2>
+            <p>نراجع ونحدّث سياسة الخصوصية هذه بانتظام. ستُبلغ التغييرات المهمة من خلال:</p>
+            <ul>
+                <li>الإشعارات داخل التطبيق</li>
+                <li>إشعارات البريد الإلكتروني</li>
+                <li>النشر على موقعنا الإلكتروني</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>13. الاتصال والدعم</h2>
+            <div class="contact-info">
+                <p><strong>استفسارات الخصوصية:</strong></p>
+                <p><strong>IGA Factory</strong><br>
+                <a class="contact-button" href="https://team-kengou.github.io/#contact-form">نموذج الاتصال</a></p>
+                <p>نقوم عادةً بالرد خلال 3 أيام عمل.</p>
+            </div>
+            <h3>13.1 أنواع الاستفسارات</h3>
+            <ul>
+                <li>طلبات الوصول إلى البيانات</li>
+                <li>طلبات تصحيح البيانات</li>
+                <li>طلبات حذف البيانات</li>
+                <li>تغييرات إعدادات الخصوصية</li>
+                <li>تقارير انتهاكات الخصوصية</li>
+                <li>استفسارات أخرى متعلقة بالخصوصية</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>14. تعليم الخصوصية</h2>
+            <p>لزيادة وعي المستخدمين بالخصوصية، نقوم بالمبادرات التالية:</p>
+            <ul>
+                <li>توفير معلومات حول الخصوصية</li>
+                <li>مشاركة ممارسات حماية البيانات الأفضل</li>
+                <li>توجيه حول إعدادات الخصوصية</li>
+                <li>تحديثات دورية حول المسائل المتعلقة بالخصوصية</li>
             </ul>
         </div>
     </article>
@@ -2096,7 +2303,7 @@
 
     <script>
         (function(){
-            const supported = ['en','ja','zh-Hans','zh-Hant','es','de','pt','fr','ko','hi'];
+            const supported = ['en','ja','zh-Hans','zh-Hant','es','de','pt','fr','ko','hi','ar'];
             const defaultLang = 'en';
 
             function getPreferredLang(){
@@ -2117,6 +2324,7 @@
                 // Map common browser language codes to our supported codes
                 if(primary === 'pt') return 'pt';
                 if(primary === 'fr') return 'fr';
+                if(primary === 'ar') return 'ar';
                 return supported.includes(primary) ? primary : defaultLang;
             }
 
@@ -2126,6 +2334,18 @@
                         el.style.display = (el.dataset.lang === lang) ? '' : 'none';
                     });
                     try{ document.documentElement.lang = lang; }catch(e){}
+                    // Set direction for page and articles
+                    try{
+                        const isRtl = ['ar'].includes(lang);
+                        document.documentElement.dir = isRtl ? 'rtl' : 'ltr';
+                        document.querySelectorAll('article.lang').forEach(a=>{
+                            if(a.dataset.lang === lang){
+                                a.setAttribute('dir', isRtl ? 'rtl' : 'ltr');
+                            } else {
+                                a.removeAttribute('dir');
+                            }
+                        });
+                    }catch(e){}
                     try{ localStorage.setItem('quria_lang', lang); }catch(e){}
                     const sel = document.getElementById('lang-select') || document.querySelector('.lang-switch select');
                     if(sel) sel.value = lang;

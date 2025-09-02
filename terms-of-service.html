@@ -58,6 +58,16 @@
             cursor: pointer;
             font-size: 14px;
         }
+        /* RTL support when html[dir="rtl"] is set */
+        html[dir="rtl"] body {
+            direction: rtl;
+            text-align: right;
+        }
+        html[dir="rtl"] ul {
+            padding-right: 20px;
+            padding-left: 0;
+        }
+        html[dir="rtl"] header { direction: rtl; }
         .disclaimer-banner { background-color:#fff3cd; border-left:4px solid #ffc107; padding:12px 14px; border-radius:6px; margin:16px 0; color:#5c4b00; }
         .disclaimer-banner strong { color:#8a6d00; }
     .contact-button { display:inline-block; background:#3498db; color:#fff; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:600; border:1px solid #2980b9; }
@@ -80,6 +90,7 @@
                 <option value="de">Deutsch</option>
                 <option value="zh-Hans">中文（简体）</option>
                 <option value="zh-Hant">中文（繁體）</option>
+                <option value="ar">العربية</option>
             </select>
         </div>
     </header>
@@ -107,6 +118,9 @@
             <div class="disclaimer-banner" data-lang="zh-Hant" style="display:none">
             <strong>提示：</strong>僅日文版為正式且具有法律效力的文本。本譯文僅供參考。若與日文版存在不一致之處，以日文版為準。
         </div>
+            <div class="disclaimer-banner" data-lang="ar" style="display:none">
+                <strong>إشعار:</strong> النسخة اليابانية فقط هي النص الرسمي وذات السريان القانوني. هذه الترجمة مقدمة لتسهيل الفهم فقط. في حال وجود أي تعارض، تسود النسخة اليابانية.
+            </div>
             <div class="disclaimer-banner" data-lang="ko" style="display:none">
                 <strong>알림:</strong> 일본어 버전만이 공식적이고 법적 효력이 있는 본문입니다. 이 번역문은 편의를 위해 제공되는 것이며, 불일치가 있을 경우 일본어 버전이 우선합니다.
             </div>
@@ -114,6 +128,102 @@
                 <strong>सूचना:</strong> केवल जापानी संस्करण आधिकारिक और कानूनी रूप से बाध्यकारी पाठ है। यह अनुवाद सुविधा के लिए प्रदान किया गया है। किसी भी असंगति के मामले में, जापानी संस्करण को प्राथमिकता दी जाएगी।
             </div>
     </div>
+
+        <!-- Arabic -->
+        <article class="lang" data-lang="ar" style="display:none">
+            <div class="last-updated">
+                <strong>آخر تحديث:</strong> 17 أغسطس 2025<br>
+                <strong>المزود:</strong> IGA Factory<br>
+            </div>
+
+            <div class="section">
+                <h2>1. الأحكام العامة</h2>
+                <p>تحدد شروط الاستخدام هذه (المشار إليها فيما يلي بـ "الشروط") أحكام استخدام تطبيق "Quria" (المشار إليه فيما يلي بـ "التطبيق") المقدم من IGA Factory (المشار إليها فيما يلي بـ "الشركة"). يوافق المستخدمون على هذه الشروط قبل استخدام التطبيق.</p>
+            </div>
+
+            <div class="section">
+                <h2>2. نظرة عامة على الخدمات</h2>
+                <p>التطبيق منصة تعلم مدعومة بالذكاء الاصطناعي توفر الخدمات التالية:</p>
+                <ul>
+                    <li>مناهج مُولَّدة بواسطة الذكاء الاصطناعي</li>
+                    <li>إنشاء تمارين فردية</li>
+                    <li>إدارة تقدم التعلم</li>
+                    <li>نظام جوائز لعرض الإنجازات</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>3. الخدمة المجانية والإعلانات</h2>
+                <p>يتم تقديم التطبيق مجانًا. ولتغطية تكاليف التشغيل، قد يتم عرض أنواع الإعلانات التالية:</p>
+                <ul>
+                    <li>إعلانات بانر</li>
+                    <li>إعلانات بينية (Interstitial)</li>
+                    <li>أشكال إعلانية أخرى</li>
+                </ul>
+                <p>يرجى ملاحظة أن عرض الإعلانات قد يؤثر على تجربة المستخدم.</p>
+            </div>
+
+            <div class="section">
+                <h2>4. تسجيل المستخدم</h2>
+                <p>عند استخدام التطبيق، يجب على المستخدمين الالتزام بما يلي:</p>
+                <ul>
+                    <li>تقديم معلومات دقيقة وكاملة</li>
+                    <li>تحديث معلومات التسجيل فور حدوث تغييرات</li>
+                    <li>الإدارة السليمة لمعلومات الحساب</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>5. السلوك الممنوع</h2>
+                <p>لا يجوز للمستخدمين القيام بالأعمال التالية عند استخدام التطبيق:</p>
+                <ul>
+                    <li>أفعال تنتهك القوانين أو النظام العام والآداب</li>
+                    <li>أفعال تضر أو تعطل وظائف خوادم أو شبكات الشركة أو طرف ثالث</li>
+                    <li>أفعال تعرقل تشغيل التطبيق</li>
+                    <li>جمع أو تخزين معلومات شخصية عن مستخدمين آخرين</li>
+                    <li>انتحال شخصية مستخدمين آخرين</li>
+                    <li>تقديم فوائد بشكل مباشر أو غير مباشر لقوى مناهضة للمجتمع فيما يتعلق بخدمات الشركة</li>
+                    <li>أعمال أخرى تعتبرها الشركة غير مناسبة</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>6. حقوق الملكية الفكرية</h2>
+                <p>جميع حقوق الملكية الفكرية المتعلقة بالتطبيق ومحتواه تعود إلى الشركة أو إلى من منحوا تراخيص للشركة. يجب على المستخدمين عدم انتهاك هذه الحقوق عند استخدام التطبيق.</p>
+            </div>
+
+            <div class="section">
+                <h2>7. إخلاء المسؤولية</h2>
+                <p>لا تتحمل الشركة أي مسؤولية عن الأضرار الناشئة عن استخدام التطبيق. ومع ذلك، لا ينطبق ذلك على الأضرار الناشئة عن سوء نية الشركة أو إهمال جسيم.</p>
+            </div>
+
+            <div class="section">
+                <h2>8. تغييرات وتعليق الخدمات</h2>
+                <p>يجوز للشركة تغيير أو تعليق تقديم التطبيق في الحالات التالية:</p>
+                <ul>
+                    <li>أثناء إجراء صيانة النظام أو التحديثات</li>
+                    <li>عندما يصبح من الصعب تقديم التطبيق بسبب قوة قاهرة مثل الزلازل أو الصواعق أو الحرائق أو انقطاع التيار أو الكوارث الطبيعية</li>
+                    <li>عندما ترى الشركة أنه من الصعب تقديم التطبيق لأسباب أخرى</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>9. تغييرات الشروط</h2>
+                <p>يجوز للشركة تغيير هذه الشروط دون إشعار مسبق للمستخدمين إذا رأت ذلك ضروريًا. تصبح الشروط المعدلة سارية عند نشرها داخل التطبيق.</p>
+            </div>
+
+            <div class="section">
+                <h2>10. القانون المعمول به والاختصاص القضائي</h2>
+                <p>تخضع هذه الشروط لقوانين اليابان. في حالة حدوث نزاعات تتعلق بهذه الشروط، تكون محكمة منطقة طوكيو هي الاختصاص القضائي الحصري كدائرة أولى.</p>
+            </div>
+
+            <div class="section">
+                <h2>11. الاتصال</h2>
+                <p>للاستفسارات المتعلقة بهذه الشروط، يرجى الاتصال بنا على:</p>
+                <p><strong>IGA Factory</strong><br>
+                <a class="contact-button" href="https://team-kengou.github.io/#contact-form">نموذج الاتصال</a></p>
+            </div>
+        </article>
 
     <!-- English -->
     <article class="lang" data-lang="en">
@@ -1077,7 +1187,7 @@
 
     <script>
         (function(){
-            const supported = ['en','ja','ko','hi','es','pt','fr','de','zh-Hans','zh-Hant'];
+            const supported = ['en','ja','ko','hi','es','pt','fr','de','zh-Hans','zh-Hant','ar'];
             const defaultLang = 'en';
 
             function getPreferredLang(){
@@ -1107,6 +1217,12 @@
                     el.style.display = (el.dataset.lang === lang) ? '' : 'none';
                 });
                 try{ document.documentElement.lang = lang; }catch(e){}
+                // Set direction for RTL languages (Arabic)
+                if(lang === 'ar'){
+                    document.documentElement.setAttribute('dir','rtl');
+                } else {
+                    document.documentElement.removeAttribute('dir');
+                }
                 localStorage.setItem('quria_lang', lang);
                 const sel = document.getElementById('lang-select');
                 if(sel) sel.value = lang;
